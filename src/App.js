@@ -4,9 +4,7 @@ import Login from './components/Login';
 import HomeChat from './components/HomeChat';
 import {
   BrowserRouter as Router,
-
   Route,
-
   Routes
 } from "react-router-dom";
 

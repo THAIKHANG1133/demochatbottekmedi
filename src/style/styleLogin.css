@@ -24,6 +24,7 @@
    
     justify-content: center;
     text-align: center;
+   
 
 }
 .input-register{
@@ -35,4 +36,7 @@
     background-color: #fdfdfd !important;
     color: rgb(252, 0, 0)!important;
     border: 2px solid red !important;
+}
+.link{
+    text-decoration: none !important;
 }

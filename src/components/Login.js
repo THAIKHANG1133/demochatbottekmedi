@@ -3,6 +3,9 @@ import '../style/styleLogin.css'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import logo from '../image/logo.png'
+import {
+    Link
+  } from "react-router-dom";
 
 
 function Login() {
@@ -36,9 +39,9 @@ function Login() {
                         onChange={(e)=>{setPhone(e.target.value); console.log(e.target.value)}}
                     />
                  
-                     <Button variant="contained" className='btn-register-chat' onClick={register}>
+                    <Link className='link' to="/home"> <Button variant="contained" className='btn-register-chat' onClick={register}>
                         Start chat
-                    </Button>
+                    </Button></Link>
                    
                 </div>
             </div>
