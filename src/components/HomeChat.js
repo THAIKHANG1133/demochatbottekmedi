@@ -2,15 +2,10 @@ import React, { useEffect, useRef, useState } from 'react'
 import '../style/styleHome.css'
 import * as _ from "lodash"
 import avt from '../image/person.jpg'
-import Avatar from '@mui/material/Avatar';
+
 import logo from '../image/logo.png'
 import OutlinedInput from '@mui/material/OutlinedInput';
-import { useHref } from 'react-router-dom';
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+
 // import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 function HomeChat() {
@@ -22,10 +17,10 @@ function HomeChat() {
     const connectionUrl = "ws://chat.crm.tekmedi.com/";
     const [conID, setConID] = useState('a2214bc9881d43b7adae648eede9685e')
     const [ticketID, setTicketID] = useState('')
-    const [QAs, setQAs] = useState('')
-    const [ASs, setASs] = useState('')
-    const [clientId, setclientId] = useState('')
-    const [as, setAS] = useState([])
+    // const [QAs, setQAs] = useState('')
+    // const [ASs, setASs] = useState('')
+    // const [clientId, setclientId] = useState('')
+    // const [as, setAS] = useState([])
     useEffect(() => {
         const socket = new WebSocket(connectionUrl);
         setsocket(socket)
@@ -66,7 +61,7 @@ function HomeChat() {
             if (a.Code === "200") {
                 setTicketID(a.Data.TicketId)
 
-                setclientId(a.Data.ClientId);
+                // setclientId(a.Data.ClientId);
                 setConID(a.Data.ConnectionID);
 
 
@@ -97,7 +92,7 @@ function HomeChat() {
     }, [])
 
     const send = () => {
-        if (value != '') {
+        if (value !== '') {
             const newmess = {
 
                 mgs: value,
@@ -125,28 +120,28 @@ function HomeChat() {
         }
 
     }
-    const handsend = () => {
-        const newmess = [{
+    // const handsend = () => {
+    //     const newmess = [{
 
-            mgs: QAs,
-            clientType: 0,
-            MessageType: 0,
-            sendTime: "13h12"
+    //         mgs: QAs,
+    //         clientType: 0,
+    //         MessageType: 0,
+    //         sendTime: "13h12"
 
-        }, {
+    //     }, {
 
-            mgs: ASs,
-            clientType: 2,
-            MessageType: 0,
-            sendTime: "13h12"
+    //         mgs: ASs,
+    //         clientType: 2,
+    //         MessageType: 0,
+    //         sendTime: "13h12"
 
-        }]
+    //     }]
 
 
 
-        setlistchat(listchat => [...listchat, newmess])
+    //     setlistchat(listchat => [...listchat, newmess])
 
-    }
+    // }
     const [listchat, setlistchat] = useState([
         {
             id: 1,
@@ -241,7 +236,7 @@ function HomeChat() {
                                 <div >
                                     <div className='chat-bot'>
                                         {mgs.mgs.map(ms => (<div>
-                                            {ms.Question != null ?
+                                            {ms.Question !== null ?
                                                 <div className='btnQA' onClick={(e) => {
                                                     const newmess = {
 
