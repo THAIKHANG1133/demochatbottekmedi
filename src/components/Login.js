@@ -13,7 +13,7 @@ function Login() {
     const [phone,setPhone]=useState('')
     
     const register=()=>{
-        window.location.href = "/home"
+       
         localStorage.setItem("name", name);
         localStorage.setItem("phone", phone);
     }
