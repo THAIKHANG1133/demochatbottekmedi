@@ -1,0 +1,38 @@
+.body-login{
+    /* background-color: aquamarine; */
+    border: 5px solid #fd0000;
+    height: 600px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    padding:50px;
+    border-radius: 10px ;
+    background-color: white;
+}
+.logo-tekmedi{
+    width: 450px;
+    height: 240px;
+}
+/* .title{
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 5% !important;
+    color:#0488f3
+} */
+.form-register-chat{
+   
+    justify-content: center;
+    text-align: center;
+
+}
+.input-register{
+    width: 80%;
+    margin-top:50px !important;
+}
+.btn-register-chat{
+    margin-top:50px !important;
+    background-color: #fdfdfd !important;
+    color: rgb(252, 0, 0)!important;
+    border: 2px solid red !important;
+}
